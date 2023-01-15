@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+
+\title{ECE109 Textbook Chapter 1 Notes}
+\author{Rohit Singh}
+\date{Winter 2023}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Learning Objectives}
+
+\begin{enumerate}
+    \item List six different property classifications of materials that determine their applicability.
+    \item Cite the four components that are involved in the design, production, and utilization of materials, and briefly describe the interrelationships between these components.
+    \item Cite three criteria that are important in the materials selection process.
+    \item \begin{enumerate}
+        \item List the three primary classifications of solid materials, and then cite the distinctive chemical feature of each
+        \item Note the four types of advanced materials and, for each, its distinctive feature(s)
+    \end{enumerate}
+    \item \begin{enumerate}
+        \item Briefly define \emph{smart material/system}
+        \item Briefly explain the concept of \emph{nanotechnology} as it applies to materials.
+    \end{enumerate}
+\end{enumerate}
+
+\section{Materials Science and Engineering}
+
+It can be useful to split the study of materials into two categories: 
+
+\begin{enumerate}
+    \item \textbf{Materials Science}: The study of the relationships that exist between the structures and properties of materials
+    \item \textbf{Materials Engineering}: The design/engineering of a material to produce a predetermined set of properties
+\end{enumerate}
+
+% DEF_START{Structure}
+\paragraph{Definition: \textit{Structure}} The structure of a material usually relates to the arrangement of its internal components. Structural elements may be classified on the basis of size and in this regard there are several levels: \begin{itemize}
+    \item \textbf{Subatomic Structure}: Involves electrons within the individual atoms, their energies and interactions with the nuclei
+    \item \textbf{Atomic Structure}: Relates to the organization of atoms to yield molecules or crystals
+    \item \textbf{Nanostructure}: Deals with aggregates of atoms that form particles (nanoparticles) that have nanoscale dimensions
+    \item \textbf{Microstructure}: Structural elements that are subject to direct observation using some type of microscope.
+    \item \textbf{Macrostructure}: Structural elements that may be viewed with the naked eye.
+\end{itemize}
+% DEF_END{Structure}
+
+%DEF_START{Property}
+\paragraph{Definition: \textit{Property}}: All materials are exposed to external stimuli that evoke some kind of responses. A property if a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, the definitions of properties are defined to be independent of material shape and size. The important properties of materials can be grouped into six different categories (DOT-MEM): \begin{itemize}
+    \item \textbf{Deteriorative}: Characteristics relating to the chemical reactivity of materials. Ex: Corrosion resistance of metals
+    \item \textbf{Optical}: Characteristics describing the stimulus response of a material to electromagnetic or light radiation. Ex: Index of refraction and reflectivity
+    \item \textbf{Thermal}: Characteristics describing the stimulus response of a material to changes in temperature or temperature gradients across a material. Ex: Thermal expansion and heat capacity
+    \item \textbf{Mechanical}: Characteristics describing the stimulus response of a material to deformation or an applied load/force. Ex: Stiffness, strength, resistance to fracture and more.
+    \item \textbf{Electrical}: Characteristics describing the stimulus response of a material to an applied electric field. Ex: Electrical conductivity and dielectric constant
+    \item \textbf{Magnetic}: The responses of a material to the application of a magnetic field. Ex: Magnetic susceptibility and magnetization
+\end{itemize}
+%DEF_END{Property
+
+\section{Classification of Materials}
+
+\subsection{Metals}
+
+%DEF_START{Metals}
+Metals are composed of one or more metallic elements (e.g. iron, aluminum, copperm titanium, gold, nickel), and often also nonmetallic elements (e.g. carbon, nitrogen, oxygen) in relatively small amounts. Atoms in metals and their alloys are arranged in a very orderly manner, and are more dense in comparison to ceramics and polymers. Metallic materials have large numbers of non-localized electrons, which contribute to many of the properties exhibited.
+%DEF_END{Metals}
+
+\subsection{Ceramics}
+
+%DEF_START{Ceramics}
+Ceramics are compounds between metallic and nonmetallic elements. They are most frequency oxides, nitrides, and carbides, as well as \textit{traditional ceramics} such as clay, cement and glass. Historically, ceramics have had extreme brittleness, but newer ceramics are being engineered for various applications that have improved this
+%DEF_END{Ceramics}
+
+\subsection{Polymers}
+
+%DEF_START{Polymers}
+Polymers include the familiar plastic and rubber materials. Many of them are organic compounds that are chemically based on carbon, hydrogen and other nonmetallic elements. Polymers have low densities.
+%DEF_END{Polymers}
+
+\subsection{Composites}
+
+%DEF_START{Composites}
+Composites are composed of two (or more) individual materials that come from the categories previously discussed. Composites are designed to achieve a combination of properties that is not displayed by a single material to best incorporate the best characteristics of each material. While many composites are manufactured (fiberglass, carbon-fiber), some are naturally occurring, such as wood or bone. 
+%DEF_END{Composites}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline 
+        & Metals & Ceramics & Polymers \\
+        \hline
+        Deteriorative & Material Specific & Environment-Resistant & Decompose at temp \\
+        Optical & Non-transparent, Lustrous & Material-Specific & Material-Specific \\
+        Thermal & Conductive & Insulative & Low-Conductivity \\ 
+        Mechanical & Stiff, Strong, Ductile, Fracture-resistant & Material-Specific & Ductile, Pliable\\
+        Electrical & Conductive & Insulative & Low-Conductivity \\
+        Magnetic & Material-Specific & Material Specific & Non-Magnetic \\
+        \hline
+        
+    \end{tabular}
+    \caption{Summary of Properties for Each Material}
+    \label{tab:properties}
+\end{table}
+
+\section{Advanced Materials}
+
+High-tech applications often require \textit{advanced materials}, which can be considered as \textit{materials of the future}
+
+\subsection{Semiconductors}
+
+%DEF_START{Semiconductors}
+Semiconductors have electrical properties that are intermediate between those of electrical conductors and insulators. The electrical characteristics of these materials are extremely sensitive to the presence of doping atoms, which can be controlled over small spatial regions to achieve desired behaviours.
+%DEF_END{Semiconductors}
+
+\subsection{Biomaterials}
+
+%DEF_START{Biomaterials}
+Biomaterials are non-living materials that are implanted into the body in a way that does not elicit rejection and allow for the host body to be improved.
+%DEF_END{Biomaterials}
+
+\subsection{Smart Materials}
+
+%DEF_START{Smart Materials}
+Smart materials are state-of-the-art materials being developed that are able to sense changes to their environment and then respond to these stimuli in predetermined manners. They often include some sort of sensor and actuator pair to respond to sensed changes. Common actuators are shape-memory alloys, piezoelectric ceramics, magnetostrictive materials and electrorheological/magnetorheological fluids.
+%DEF_END{Smart Materials}
+
+\subsection{Nanomaterials}
+
+%DEF_START{Nanomaterials}
+Nanomaterials can be any of the four main types of materials, however they are distinguished on the basis of their size as they are less than 100 nanometers. 
+%DEF_END{Nanomaterials}
+
+\end{document}

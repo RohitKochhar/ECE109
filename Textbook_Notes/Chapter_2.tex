@@ -1,0 +1,242 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+
+\title{ECE109 Textbook Chapter 2 Atomic Structure Notes}
+\author{Rohit Singh}
+\date{Winter 2023}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Learning Objectives}
+
+\begin{enumerate}
+    \item Name the two atomic models cited, and note the differences between them
+    \item Describe the important quantum-mechanical principle that relates to electron energies
+    \item Schematically plot attractive, repulsive, and net energies versus interatomic seperation for two atoms or ions
+    \item \begin{enumerate}
+        \item Briefly describe ionic, covalent, metallic, hydrogen, and van der Waals bonds.
+        \item Note which materials exhibit each of these bonding types.
+    \end{enumerate}
+\end{enumerate}
+
+\section{Fundamental Concepts}
+
+Each atom consists of a small nucleus made up of protons and neutrons which is encircled by moving electrons. Electrons and protons are electrically charged with a magnitude of $1.602 \times 10^{-19}$ coloumbs. Protons and neutrons have the same mass (around $1.67 \times 10^{-27}$ kg), with electrons being significantly lighter (around $9.11 \times 10^{-31}$ kg).
+
+We characterize elements by the number of protons in the nucleus, which is referred to as the \textbf{atomic number} (1-92, or hydrogen - uranium). The \textbf{atomic mass} of a specific atom can be expressed as the sum of the masses of both protons and neutrons within the nucleus, although the number of protons is the same for all atoms of a given element, it is possible that the number of neutrons can be variable, giving rise to \textbf{isotopes}, which are elements that have two or more atomic masses. For isotopic elements, the atomic weight is a weighted average of the atomic masses of the atom's naturally occurring isotopes.
+
+\section{Electrons in Atoms}
+
+\subsection{Bohr's Model of the Electron}
+
+The rise of quantum mechanics was due to the realization that many phenomena involving electrons in solids could not be explained in terms of classical mechanics, and one of the early concepts included in the paradigm shift was \textbf{Bohr's model of the atom}, which theorizes that electrons revolve around the atomic nucleus in discrete orbitals and the position of any one election is more or less well defined in terms of its orbital layer.
+
+Further, quantum mechanics stipulated that the energies of electrons are \textit{quantized}, meaning that electrons are only able to have specific (discrete) values of energy, and that while an electron may change energy, it would have to make a quantum jump to an allowed higher energy (by absorbing energy) or to a lower energy (by emitting energy). These levels can be thought of as \textit{energy levels} or \textit{states}.
+
+From this, Bohr's model represents an early attempt to describe electrons in atoms in terms of position and energy.
+
+\subsection{Wave-Mechanical Model}
+
+The Bohr model is not without limitations, specifically due to the fact that it has certain inabilities to explain several phenomena involving electrons. These limitations were resolved with the advent of the \textbf{wave-mechanical model}
+
+In the wave-mechanical model, electrons are considered to exhibit both wave-like and particle-like characteristics. In this model, an electron is not treated as a particle moving in a discrete orbital, but instead position is considered to be the probability of an electron being at various locations around the nucleus. In other words, position is described by a probability distribution or electron cloud.
+
+\subsection{Quantum Numbers}
+
+Every electron in an atom can be characterizes by four parameters called \textbf{quantum numbers}. Three of these numbers provide specification about the size, shape and spatial orientation of an electron's probability density (or orbital). 
+
+Quantum numbers also dictate the number of states within each subshell, and these shells are specified by a \textit{principal quantum number}, $n$, which may take on integral values beginning with 1. These shells are sometimes designated by the letters: $K, L, M, N, O$ and so on, corresponding to $n = 1,2,3,4,5, \dots$, respectively.
+
+The second/azimuthal quantum number, $l$, designates the subshell, with values of $l$ restricted by the magnitude of $n$ and can take on integer values that range from $l=0$ to $l=(n-1)$. ($l \in [0, n-1]$). Each subshell is denoted by a lowercase letter as shown in table \ref{tab:lToLetter}:
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+         \textit{Value of $l$} & \textit{Letter Designation} \\
+         \hline
+         0 & $s$ \\
+         1 & $p$ \\ 
+         2 & $d$ \\ 
+         3 & $f$ \\
+         \hline
+    \end{tabular}
+    \caption{Subshell to letter relation}
+    \label{tab:lToLetter}
+\end{table}
+
+The shapes of the electron orbitals depend on $l$, with $s$ orbitals are spherical and centered on the nucleus, $p$ orbitals are dumbbell-shaped and can be oriented in each of the three dimensions ($x,y,z$ or more descriptively, $p_x, p_y, p_z$).
+
+The number of electron orbitals in each subshell is determined by the third quantum number (a.k.a the magnetic number), $m_l$, which can take on integer values between $-l$ and $+l$. (Note that if $l=0$, then $m_l=0=+0=-0$). The number of values of $m_l$, and therefore the number of electron orbitals, must be odd, as shown in table \ref{tab:summaryOfQuantumNumbers}
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        $n$ & $l$ & $m_l$ & Subshell & # Orbitals & # Electrons \\
+        \hline
+        \hline
+         1 & 0 & 0 & $1s$ & 1 & 2 \\
+         \hline
+         2 & 0 & 0 & $2s$ & 1 & 2 \\
+           & 1 & -1,0,+1 & $2p$ & 3 & 6 \\
+         \hline
+         3 & 0 & 0 & $3s$ & 1 & 2 \\
+           & 1 & -1,0,+1 & $3p$ & 3 & 6 \\
+           & 2 & -2, -1, 0, +1, +2 & $3d$ & 5 & 10 \\
+        \hline 
+        4 & 0 & 0 & $4s$ & 1 & 2 \\
+           & 1 & -1,0,+1 & $4p$ & 3 & 6 \\
+           & 2 & -2, -1, 0, +1, +2 & $4d$ & 5 & 10 \\
+           & 3 & -3, -2, -1, 0, 1, 2, 3 & $4f$ & 7 & 14 \\
+        \hline
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:summaryOfQuantumNumbers}
+\end{table}
+
+There is also a \textbf{spin moment} associated with each electron, which can either be oriented up or down, which is described with the fourth quantum number, $m_s \in \{-\frac{1}{2},+\frac{1}{2}\}$
+
+\subsection{Electron Configuration}
+
+To determine the manner in which these states are filled with electrons, we use the \textbf{Pauli exclusion principle}, which stipulates the each electron state can hold no more than 2 electrons that must have opposite spins. From this, we have that $s, p, d,$ and $f$, subshells can each accomadate a total of 2, 6, 10 and 14 electrons, respectively.
+
+For most atoms, electrons do not fill all possible states, but instead just the lowest possible energy states in the electron shells and subshells. If electrons all occupt the lowest possible energies in accord with the foregoing restrictions, it is said that the atom is \textbf{ground state}. The way that the energy states are occupied is referred to as the \textbf{electron configuration}. Conventionally, the number of electrons in each subshell is indicated by a superscript after the shell-subshell designation, for example the electron configurations for hydrogen, helium, and sodium are $1s^1$, $1s^2$, and $1s^2 2s^2 2p^6 3s^1$.
+
+Another important concept is that of the \textbf{valence electron}, which are those electrons that occupy the outermost shell, which are extremely important, since they participate in bonding between atoms to form atomic and molecular aggregates.
+
+\section{The Periodic Table}
+
+Most elements in the periodic table are metals, which are often termed as \textbf{electropositive} elements, meaning that they are capable of giving up their few valence electrons to become positively charged ions. There are many elements on the right side of the table which are referred to as \textbf{electronegative}, meaning that they are able to accept electrons to form negatively charged ions. The electronegativity of the periodic table increases in moving from left to right and from bottom to top. Atoms are more likely to accept electrons if their shells are almost full, and if they are less "shielded" from the nucleus.
+
+\section{Atomic Bonding in Solids}
+
+\subsection{Bonding Forces and Energies}
+
+To understand how atomic bonding occurs, it can be helpful to imagine two isolated atoms interacting as they are brought closer together from the point of infinite seperation.
+
+\begin{itemize}
+    \item At large distances, interactions are negligible as the atoms are too far apart to have an influence on each other
+    \item At small distances, atoms exert forces on the others, which can either be attractive $F_A$ or repulsive $F_R$, with the magnitude of the force depending on on the interatomic distance, $r$.
+\end{itemize}
+
+The origin of an attractive force $F_A$ depends on the particular type of bonding that exists between the two atoms, whereas repulsive forces arise from interactions between the negatively charged electron clouds for the two atoms and are important only at small values of $r$ where the outer electron shells of the two atoms begin to overlap.
+
+The net force between two atoms is simply the sum of both attractive and repulsive components: $F_N = F_A + F_R$. When $F_A = F_R \to F_N = 0$, we determine that a state of equilibrium exists, and the centers of the two atoms remain spaces by the \textbf{equilibrium spacing}, $r_0$, which is $0.3 \text{nm}$ for many atoms. When in this state, movement that would disrupt the state of equilibrium is met by the opposing force, that is, attempts to push the atoms closer together will result in resistance from the repulsive force, and vice-versa.
+
+Often, we will work with the potential energies between two atoms instead of forces, which is mathematically represented by equation \ref{eq:energies}, with $E$ and $F$ representing energies and force, respectively.
+
+\begin{equation}\label{eq:energies}
+    E = \int F dr
+\end{equation}
+
+Which gives a specific solution for atomic systems:
+
+\begin{equation}
+    E_N = \int_r^{\infty} F_N dr = \int_r^{\infty} F_A dr + \int_r^{\infty} F_R dr = E_A + E_R
+\end{equation}
+
+The minimum net energy between two atoms occurs at the equilibrium spacing point, which corresponds to the \textbf{bonding energy} between two atoms, $E_0$.
+
+In the preceeding discussion, we only considered how two atoms behave as they move closer to each other, which is an overly simplified case. A similar treatment can be used for systems comprised of many atoms, in which a bonding energy $E_0$ is associated with each atom.
+
+The value of the bonding energy can give us useful information about the properties of a material. Some examples include:
+
+\begin{itemize}
+    \item Materials with large bonding energies typically have high melting temperatures
+    \item At room temp, solid substances are formed for large bonding energies, whereas for small energies, the gaseous state is more likely.
+    \item Liquids are most common when the energies are of intermediate magnitude.
+    \item The mechanical stiffness of a material is dependent on the shape of it's force-vs-interatomic seperation curve, with steep curves relating to stiffer materials.
+    \item The amount that a material expands upon heating or contract upon cooling is related to the shape of its $E$-vs-$r$ curve, with deeper "troughs" typically indicating that the material will have a low coefficient of thermal expansion.
+\end{itemize}
+
+\subsection{Primary Interatomic Bonds}
+
+\subsubsection{Ionic Bonding}
+
+%DEF_START{Ionic Bonding}
+\textbf{Ionic Bonding} is found in materials composed of both metallic and non-metallic elements, elements situated at the horizontal extremities of the periodic tables. In ionic bonding, the metallic elements eaasily give up their valence electrons to the non-metallic atoms, resulting in all atoms acquiring stable or inert gas configurations as well as an electrical charge, causing them to become ions. 
+%DEF_END{Ionic Bonding}
+
+For example, NaCl (sodium chloride) forms as the sodium atom assumes the electron structure of neon by giving up a single valence \textit{3s} electron to a chlorine atom, causing the sodium to gain a single positive charge, and the chloride to gain a net negative charge.
+
+In ionic bonding, the bonding forces are \textbf{coulombic}, meaning that the oppositely attracted ions attract one another. For two isolated ions, the attractive energy $E_A$ is a function of the interatomic distance $r$, as shown in equation \ref{eq:ea}
+
+\begin{equation}\label{eq:ea} 
+    E_A = -\frac{A}{r} = -\frac{\frac{1}{4\pi\epsilon_0}(|Z_1|e)(|Z_2|e)}{r}
+\end{equation}
+
+Where:
+
+\begin{itemize}
+    \item $\epsilon_0$: Permittivity of a vacuum $= 8.85 \times 10^{-12}$ F/m
+    \item $|Z_1|, |Z_2|$: Absolute values of the valences for the two ions types
+    \item $e$: Electronic charge $= 1.602 \times 10^{-19}$
+\end{itemize}
+
+Analogously, the equation for the repulsive energy is shown in equation \ref{eq:er}
+
+\begin{equation}\label{eq:er}
+    E_R = \frac{B}{r^n}
+\end{equation}
+
+Where:
+
+\begin{itemize}
+    \item $B,n$: Constants whose values depend on the particular ionic system ($n \approx 8$)
+\end{itemize}
+
+Ionic bonding is \textit{non-directional}, meaning that the magnitude of the bond is equal in all directions around an ion, from which it follows that for ionic materials to be stable, all positive ions must have as nearest neighbours negatively charged ions in a three-dimensional scheme, and vice versa.
+
+\subsubsection{Covalent Bonding}
+
+%DEF_START{Covalent Bonding}
+\textbf{Covalent Bonding} is bonding that occurs between atoms whose atoms have small differences in electronegativity, which can be determined by their proximity next to one another on the periodic table. In covalent bonding, stable electron configurations are assumed by the sharing of electrons between adjacent atoms. Two covalently bonded atoms will each contribute at least one electron to the bond, with the sharted electrons considered to belong to both atoms.
+%DEF_END{Covalent Bonding}
+
+For example, hydrogen molecules ($\text{H}_2$) have a single \textit{1s} electron, via covalent bonding both atoms can acquire a single electron, resulting in a stable electron. 
+
+Covalent bonding is \textit{directional}, meaning that it is between specific atoms and may exist only in the direction between one atom and another that participates in the electron sharing.
+
+\subsubsection{Metallic Bonding}
+
+%DEF_START{Metallic Bonding}
+\textbf{Metallic bonding} is found in metals and their alloys. A simple model has been proposed for this phenomena in which valence electrons are not bound to a particular atom but instead are free to drift between the entire metal. These electrons can be thought to belong to the metal as a whole, where they form a "sea of electrons" of "electron cloud". The remaining nonvalence electrons and atomic nuclei form an \textbf{ion core}, which possesses a net positive charge equal in magnitude to the total valence electron charge per atom. 
+%DEF_END{Metallic Bonding}
+
+Metallic bonding is \textit{non-directional}. These free electrons are the cause for the increased thermal and electric conductivity in metals.
+
+\subsection{Secondary Bonding or Van der Waals Bonding}
+
+\textbf{Secondary bonds} or \textbf{Van der Waals bonds} are weaker compared to primary and chemical bonds. Secondary bonding is present between virtually all atoms and molecules, but it can be obscured if any of the three primary bonding types are present. These secondary bonds arise from atomic or molecular \textbf{dipoles.}
+
+%DEF_START{Dipoles}
+\textbf{Dipoles} exist whenever there is some separation of positive and negative portions of an atom or molecule. These dipoles have a positive end and a negative end, allowing for coulombic attraction to occur between adjacent dipoles.
+%DEF_END{Dipoles}
+
+\subsubsection{Fluctuating Induced Dipole Bonds}
+
+Dipoles can be created in atoms or molecules that are normally electrically symmetric. This can occur due to constant vibrational motion that causes short-lived distortions of electrical symmetry, resulting in the creation of a dipole that results in the induction of a second dipole that is weakly attracted or bonded ot the first. This is one type of van der Waals bonding.
+
+This type of bonding can cause liquefaction and solidification of inert gases and other electrically neutral and symmetric molecules. Materials which experience this induced dipole bonding typically have extremely low melting and boiling temperatures. 
+
+\subsubsection{Polar Molecule-Induced Dipole Bonds}
+
+%DEF_START{Polar Molecules}$
+\textbf{Polar molecules} are those which contain permanent dipole moments by virtue of an asymmetrical arrangement of positively and negatively charged regions. Polar molecules can induce dipoles in adjacent nonpolar molecules, resulting in a bond due to attractive forces between the two molecules. 
+%DEF_END{Polar Molecules}
+
+\subsubsection{Permanent Dipole Bonds}
+
+Coulombic forces exist between adjacent polar molecules. This can give rise to a special case of polar molecule bonding, \textbf{hydrogen bonding}, which occurs between modules in which hydrogen is covalently bonded to flourine, oxygen or nitrogen, since in these bonds the single hydrogen atom is shared with the other atom, causing the hydrogen end of the bond to essentially be a positively charged bare proton unscreened by any electrons.
+
+\end{document}
